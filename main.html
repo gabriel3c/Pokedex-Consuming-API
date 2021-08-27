@@ -15,42 +15,62 @@
 
     <main class="pokedex">
       <section class="left">
-        <div class="navigation">
-          <div class="btn-on">
-            <button class="onoff"></button>
+        <h2 class="namePk">_Nome Pokemom_</h2>
+        <h3 class="idPk">_id Pokemom_</h3>
+        <image>
+          <img
+            id="image"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSltPz5oZ_UNGKNybl1SJ-1g4EOxOLnp0IaUq6mQaY_1L-lL2C_TFbvnMzpJplSacI0d1A&usqp=CAU"
+          />
+        </image>
+        <div class="evolve">
+          <div class="evolveFrom">
+            <p>
+              Evolui de <br />
+              _pokemoBefore_
+            </p>
           </div>
-          <nav class="nextPoke">
-            <ul>
-              <li><button class="reset"></button></li>
-              <li><button class="back"></button></li>
-              <li><button class="next"></button></li>
-            </ul>
-          </nav>
+          <div class="evolveTo">
+            <p class="evolveto">
+              Evolui para <br />
+              _pokemomAfter_
+            </p>
+          </div>
         </div>
-        <div class="screen">
-          <image>
-            <img class="imagePokemom" src="" alt="" />
-          </image>
-        </div>
-        <div class="search">
-          <p class="searchBar"></p>
+
+        <div class="typesPk">
+          <p class="1">Voador</p>
+          <p class="2">Normal</p>
         </div>
       </section>
-      <section class="middle"></section>
+
       <section class="right">
-        <div class="description">
-          <h3 class="namePokemom"></h3>
-          <p class="description"></p>
+        <div class="searchPk">
+          <input type="text" id="search" placeholder="Busque o pokemom..." />
         </div>
-        <div class="status">
-          <h3 class="statusPokemom"></h3>
-          <p class="lifeStatus"></p>
-          <p class="strenghtStatus"></p>
-          <p class="speedStatus"></p>
-          <p class="defenseStatus"></p>
+        <div class="listPk">
+          <table id="tablePk">
+            <tbody>
+              <tr>
+                <td id="idPk">#001</td>
+                <td id="namePk">sdfsdfasdfs</td>
+              </tr>
+              <tr>
+                <td id="idPk">#001</td>
+                <td id="namePk">sdfsdfasdfs</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="types">
-          <p class="type"></p>
+        <div class="statusPk">
+          <p id="hp">HP = x</p>
+          <p id="atack">ATK = x</p>
+          <p id="defense">DEF = x</p>
+          <p id="sAtack">S.ATK = x</p>
+
+          <p id="sDefense">S.DEF = x</p>
+
+          <p id="speed">SPD = x</p>
         </div>
       </section>
     </main>
