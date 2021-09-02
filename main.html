@@ -15,62 +15,44 @@
 
     <main class="pokedex">
       <section class="left">
-        <h2 class="namePk">_Nome Pokemom_</h2>
-        <h3 class="idPk">_id Pokemom_</h3>
-        <image>
+        <h2 id="namePk">_Nome Pokemom_</h2>
+        <figure>
           <img
             id="image"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSltPz5oZ_UNGKNybl1SJ-1g4EOxOLnp0IaUq6mQaY_1L-lL2C_TFbvnMzpJplSacI0d1A&usqp=CAU"
           />
-        </image>
-        <div class="evolve">
-          <div class="evolveFrom">
-            <p>
-              Evolui de <br />
-              _pokemoBefore_
-            </p>
-          </div>
-          <div class="evolveTo">
-            <p class="evolveto">
-              Evolui para <br />
-              _pokemomAfter_
-            </p>
-          </div>
-        </div>
+        </figure>
 
-        <div class="typesPk">
-          <p class="1">Voador</p>
-          <p class="2">Normal</p>
-        </div>
+        <h3 id="idPk">_id Pokemom_</h3>
+        <div id="typesPk"></div>
       </section>
 
       <section class="right">
         <div class="searchPk">
-          <input type="text" id="search" placeholder="Busque o pokemom..." />
+          <input type="text" placeholder="Busque o pokemom" id="search" />
         </div>
         <div class="listPk">
           <table id="tablePk">
             <tbody>
               <tr>
-                <td id="idPk">#001</td>
-                <td id="namePk">sdfsdfasdfs</td>
+                <td id="id">#001</td>
+                <td id="name">sdfsdfasdfs</td>
               </tr>
               <tr>
-                <td id="idPk">#001</td>
-                <td id="namePk">sdfsdfasdfs</td>
+                <td id="id">#001</td>
+                <td id="name">sdfsdfasdfs</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="statusPk">
-          <p id="hp">HP = x</p>
-          <p id="atack">ATK = x</p>
-          <p id="defense">DEF = x</p>
-          <p id="sAtack">S.ATK = x</p>
 
-          <p id="sDefense">S.DEF = x</p>
-
-          <p id="speed">SPD = x</p>
+        <div class="statusPk" id="stats">
+          <p id="stats0">HP</p>
+          <p id="stats1">Atack</p>
+          <p id="stats2">Defense</p>
+          <p id="stats3">S.Atack</p>
+          <p id="stats4">S.Defense</p>
+          <p id="stats5">Speed</p>
         </div>
       </section>
     </main>

@@ -22,14 +22,14 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 800px;
-  height: 600px;
+  width: 600px;
+  height: 400px;
   margin: 50px auto 0px;
 }
 
 .left {
-  width: 400px;
-  height: 600px;
+  width: 300px;
+  height: 400px;
 
   text-align: center;
   justify-content: center;
@@ -38,60 +38,73 @@ h1 {
 }
 
 h2 {
-  margin: 50px auto 0;
+  margin: 10px auto;
 }
 
+#namePk {
+  text-transform: capitalize;
+  font-size: 30px;
+}
+
+#idPk {
+  font-size: 25px;
+}
 img {
-  margin: 50px auto;
+  margin: 5px auto;
 }
 #image {
-  width: 250;
+  width: 200px;
   height: 200px;
-  border-radius: 10px;
-  box-shadow: gray 5px 5px;
+  border: 1px solid rgb(24, 23, 23);
 }
 
-.evolve {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 30px;
-  font-size: 1.2rem;
-}
-
-.typesPk {
+#typesPk {
   display: flex;
   justify-content: center;
-  margin: 30px auto;
+  margin: 10px auto;
 }
-.typesPk p {
+#typesPk p {
   font-size: 1.2rem;
   margin: 10px;
   background: gray;
   padding: 10px;
-  border-radius: 20%;
+  border-radius: 25px;
+  width: 70px;
+  text-transform: capitalize;
 }
 .right {
-  width: 400px;
-  height: 600px;
+  width: 300px;
+  height: 400px;
 
   border-left: 3px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+.searchPk {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
 }
 
 #search {
-  width: 300px;
+  background: white;
+  width: 240px;
   height: 35px;
   font-size: 1.2rem;
-  margin: 30px auto;
   border-radius: 5px;
+  justify-content: start;
   padding-left: 10px;
+  display: flex;
+  align-items: center;
+  outline: none;
 }
 
 #tablePk {
-  width: 310px;
-  height: 300px;
+  width: 250px;
+  height: 200px;
   background: cornflowerblue;
   display: flex;
   justify-content: start;
@@ -109,12 +122,13 @@ tr {
 }
 
 .statusPk {
-  margin: 30px auto;
+  margin: auto;
   border-radius: 15px;
   background: rgb(196, 131, 131);
-  width: 350px;
+  width: 250px;
+  height: 100px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -124,5 +138,5 @@ td {
 }
 .statusPk p {
   font-size: 1.2rem;
-  margin: 20px;
+  margin: 5px auto;
 }
