@@ -11,9 +11,14 @@
   <body>
     <header class="titulo-principal">
       <h1 class="title">Pokedéx</h1>
+     
     </header>
-
+    <div class="searchPk">
+      <button class="btn-search"><img id="lupa"src="./assets/lupa.png"></button>
+      <input type="text" placeholder="Busque aqui seu pokemon" id="search" />
+    </div>
     <main class="pokedex">
+      
       <section class="left">
         <h2 id="namePk">_Nome Pokemom_</h2>
         <figure>
@@ -28,20 +33,10 @@
       </section>
 
       <section class="right">
-        <div class="searchPk">
-          <input type="text" placeholder="Busque o pokemom" id="search" />
-        </div>
+        
         <div class="listPk">
           <table id="tablePk">
-            <tbody>
-              <tr>
-                <td id="id">#001</td>
-                <td id="name">sdfsdfasdfs</td>
-              </tr>
-              <tr>
-                <td id="id">#001</td>
-                <td id="name">sdfsdfasdfs</td>
-              </tr>
+            <tbody id='tableBody'>
             </tbody>
           </table>
         </div>
@@ -59,5 +54,6 @@
 
     <footer class="rodape"></footer>
     <script src="./script.js"></script>
+    <script src="./pokedexList.js"></script>
   </body>
 </html>

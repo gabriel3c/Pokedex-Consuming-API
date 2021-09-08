@@ -21,16 +21,11 @@ const colors = {
 }
 //type,color1,color2,color3
 const typeColor = Object.entries(colors)
-console.log(typeColor)
 
 const inputSearch = document.getElementById('search') // campo de busca
-
 const imgPokemon = document.getElementById('image') // imgem do pokemon
-
 const statusPokemon = document.getElementById('stats') // div com status do pokemon
-
 const typesPokemon = document.getElementById('typesPk') // tipos, se é eletric, fire, water ...
-
 //evento no input de busca ao apertar uma tecla
 inputSearch.addEventListener('keydown', chamaPokemon)
 
@@ -56,6 +51,7 @@ function searchPokemon(namePokemon) {
       return response.json()
     })
     .then((data) => {
+      console.log(data)
       catchPokemon(data)
     })
 }
@@ -155,3 +151,7 @@ function changeColorType(type, p) {
     }
   }
 }
+
+
+
+
