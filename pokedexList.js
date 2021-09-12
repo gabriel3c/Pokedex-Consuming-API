@@ -23,9 +23,8 @@ function showPokedex(pokedex){
         return acc
         },
         []
-    )
-    console.log(dataPokedex)
-    
+    )   
+
     const tbody = document.getElementById('tableBody')
 
     // criar table data e tr que ficam dentro do tbody
@@ -51,14 +50,12 @@ function showPokedex(pokedex){
         tbody.appendChild(tr)
     });
 
-    const tr = document.querySelectorAll('.trData')    // é um nodeList, que na pratica é um array
+    const trList = document.querySelectorAll('.trData')    // é um nodeList, que na pratica é um array
        
     // evento em cada row da table, para clicar e exibir o pokemon
-    tr.forEach((element)=>{
+    trList.forEach((element)=>{
         element.addEventListener('click',()=>{
             searchPokemon(element.lastChild.innerHTML) //last child aqui, porque são 2, e o first é o id
-        })
+        })                                              // element é cada tr buscado no queryselector
     })
 }
-
-//
