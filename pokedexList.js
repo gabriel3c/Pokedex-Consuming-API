@@ -1,5 +1,3 @@
-
-  
 const urlPokedex = `https://pokeapi.co/api/v2/pokedex/1/` // a busca na api ja ocorre direto com o nome ou id do pokemon passado
   
 fetch(urlPokedex)
@@ -10,17 +8,13 @@ fetch(urlPokedex)
         showPokedex(data)
     })
 
-
-const listPokemon = document.getElementById('tablePk') //tabela da pokedex
-const tBody = document.getElementsByTagName('tbody')
-
 function showPokedex(pokedex){
     console.log(pokedex)
     
     //acessar dados e organizar com os que eu vou usar
-    const arrayPokemons = pokedex.pokemon_entries
+    //const arrayPokemons = pokedex.pokemon_entries
 
-    const dataPokedex = arrayPokemons.reduce((acc, elem) =>{
+    const dataPokedex = pokedex.pokemon_entries.reduce((acc, elem) =>{
         let dataPokemon = {
                 id: elem.entry_number,
                 name: elem.pokemon_species.name,
@@ -33,6 +27,7 @@ function showPokedex(pokedex){
     console.log(dataPokedex)
     
     const tbody = document.getElementById('tableBody')
+
     // criar table data e tr que ficam dentro do tbody
     dataPokedex.forEach(element => {
         //td com id e name
@@ -45,19 +40,25 @@ function showPokedex(pokedex){
         let name = document.createElement('td')
         name.setAttribute('class', 'name')
         name.innerHTML = element.name
+
         //tr que recebe os td's como filhos
         let tr = document.createElement('tr')
         tr.setAttribute('class', 'trData')
         tr.appendChild(id)
         tr.appendChild(name)
+
+        //table body que recebe as tr's
         tbody.appendChild(tr)
     });
 
-    const tr = document.querySelectorAll('.trData')
-    console.log(tr.childNodes)    
+    const tr = document.querySelectorAll('.trData')    // é um nodeList, que na pratica é um array
+       
+    // evento em cada row da table, para clicar e exibir o pokemon
     tr.forEach((element)=>{
         element.addEventListener('click',()=>{
-            searchPokemon(element.lastChild.innerHTML)
+            searchPokemon(element.lastChild.innerHTML) //last child aqui, porque são 2, e o first é o id
         })
     })
 }
+
+//
