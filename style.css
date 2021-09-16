@@ -32,6 +32,10 @@ h1 {
   width: 20px;
   height: 20px;
   background-color: none;
+  padding: 0 10px;
+}
+#lupa:hover{
+  cursor: pointer;
 }
 #search {
   background: white;
@@ -143,6 +147,17 @@ tbody {
   background-color: burlywood;
   cursor: pointer;
 }
+
+.trDataCheck{
+  background-color: burlywood;
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px 4px;
+  padding: 0 4px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }

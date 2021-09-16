@@ -21,21 +21,29 @@ const colors = {
 }
 
 const inputSearch = document.getElementById('search') // campo de busca
+const buttonSearch = document.getElementById('lupa') // campo de busca
 const imgPokemon = document.getElementById('image') // imagem do pokemon
 const statusPokemon = document.getElementById('stats') // div com status do pokemon
 const typesPokemon = document.getElementById('typesPk') // lista dos tipos, se é eletric, fire, water ...
 
 //evento no input de busca ao apertar uma tecla
 inputSearch.addEventListener('keydown', chamaPokemon)
+buttonSearch.addEventListener('click', btnSearch)
+
+function btnSearch(event) {
+  const pokemon = document.getElementById('search').value
+  searchPokemon(pokemon)
+}
 
 function chamaPokemon(event) {
   console.log(event.target.value)
   let pokemon = event.target.value
-  
   // quando a tecla enter é pressionada, invoca a função que traz as informações
   // o código da tecla 'Enter' é 13
   if (event.keyCode === 13) {
-    searchPokemon(pokemon)
+  searchPokemon(pokemon)
+
+  
   }
 }
 
@@ -69,8 +77,27 @@ function catchPokemon(pokemon) {
 
   let firstType = typesPokemon.children[0].getAttribute('id')
   bgColorImage = imgPokemon.style.backgroundColor = colors[firstType][2]
-}
 
+  //função pra trocar classe da tr que tem o pokemon buscado
+  // filtrar a tr que tem como lastchild o nome do pokemon
+  // trocar classe daquele que ta checkado mas que tem nome diferente do valor do input
+  const trList = document.querySelectorAll('.trData')
+  trList.forEach((element)=>{ 
+    if((element.lastChild.innerHTML === pokemon.name )){
+      console.log(element.firstChild.innerHTML, 'testestsetse')
+          element.setAttribute('class', 'trDataCheck')     
+          element.scrollIntoView() 
+    }  
+
+    const trCheckList = document.querySelectorAll('.trDataCheck')
+    trCheckList.forEach((tr)=>{
+      if(tr.lastChild.innerHTML !== inputSearch.value){
+        tr.setAttribute('class', 'trData')
+      }
+    })
+  })
+  
+}
 
 // função organiza o nome dos status conforme a vontade do cliente ou dev
 function StatusPokemon(array) {

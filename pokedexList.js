@@ -51,11 +51,24 @@ function showPokedex(pokedex){
     });
 
     const trList = document.querySelectorAll('.trData')    // é um nodeList, que na pratica é um array
-       
-    // evento em cada row da table, para clicar e exibir o pokemon
+    // evento em cada row da table, para clicar e exibir o pokemton
     trList.forEach((element)=>{
+
+          
         element.addEventListener('click',()=>{
+            const trChecked = document.querySelector('.trDataCheck')
+            if(trChecked){
+                trChecked.setAttribute('class', 'trData')
+            }
+
             searchPokemon(element.lastChild.innerHTML) //last child aqui, porque são 2, e o first é o id
-        })                                              // element é cada tr buscado no queryselector
+            
+            element.setAttribute('class', 'trDataCheck')
+            
+            inputSearch.value = element.lastChild.innerHTML
+            //element.scrollIntoView({behavior:"smooth"});
+        })                                              // element é cada tr buscado no queryselectorall
+
+       
     })
 }
