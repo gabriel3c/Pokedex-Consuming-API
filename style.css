@@ -32,6 +32,9 @@ h1 {
   justify-content: start;
 }
 
+#search-icon{
+  background-color: white;
+}
 #lupa{
   justify-content: start;
   width: 20px;
