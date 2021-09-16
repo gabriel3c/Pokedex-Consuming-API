@@ -3,11 +3,15 @@
   padding: 0;
   border: 0;
 }
+html{
+  width: auto;
+  height: auto;
+}
 
 body {
   width: 100vw;
-  height: 90vh;
-  background: rgb(60, 193, 233);
+  height:98vh;
+  background: linear-gradient(-45deg, #2e1377,#a585ff);
 }
 
 h1 {
@@ -18,7 +22,7 @@ h1 {
 .searchPk {
   display: flex;
   flex-direction: row;
-  margin: 10px auto 0;
+  margin: 15px auto 0;
   background-color: rgb(255, 255, 255);
   width: fit-content;
   padding: 5px;
@@ -52,13 +56,14 @@ h1 {
 .pokedex {
   border: 3px solid black;
   border-radius: 20px;
-  background: rgb(241, 62, 62);
+  background: #d62323;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 600px;
   height: 400px;
-  margin: 10px auto 0px;
+  margin: 20px auto 0px;
+  box-shadow: black 10px 10px 10px;
 }
 
 .left {
@@ -90,6 +95,8 @@ img {
   width: 200px;
   height: 200px;
   border: 1px solid rgb(24, 23, 23);
+  border-radius: 10px;
+  box-shadow: black 5px 5px 15px;
 }
 
 #typesPk {
@@ -99,12 +106,14 @@ img {
 }
 #typesPk p {
   font-size: 1.2rem;
+  font-weight: bold;
   margin: 10px;
   background: gray;
   padding: 10px;
-  border-radius: 25px;
+  border-radius: 15px;
   width: 70px;
   text-transform: capitalize;
+  box-shadow: black 10px 10px 15px;
 }
 .right {
   width: 300px;
@@ -123,16 +132,18 @@ img {
 #tablePk {
   width: 250px;
   height: 200px;
-  background: cornflowerblue;
+  background: linear-gradient(75deg,rgb(156, 193, 248),  #557df3) ;
   display: flex;
   justify-content: start;
   border-radius: 10px;
   overflow: auto;
+  box-shadow: black 10px 10px 15px;
  
 }
 
 tbody {
   width: 100%;
+  
 }
 .trData {
   display: flex;
@@ -144,12 +155,12 @@ tbody {
 
 }
 .trData:hover{
-  background-color: burlywood;
+  background-color: rgb(166, 194, 255);
   cursor: pointer;
 }
 
 .trDataCheck{
-  background-color: burlywood;
+  background-color: rgb(166, 194, 255);
   display: flex;
   justify-content: flex-start;
   margin: 5px 4px;
@@ -163,7 +174,7 @@ tbody {
 }
 .statusPk {
   border-radius: 15px;
-  background: rgb(196, 131, 131);
+  background:rgb(137, 166, 247);
   width: 250px;
   height: 100px;
   display: flex;
@@ -171,6 +182,7 @@ tbody {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  box-shadow: black 10px 10px 15px;
 }
 td {
   padding: 5px;
