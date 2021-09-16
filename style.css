@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: Tahoma;
 }
 html{
   width: auto;
@@ -160,13 +161,14 @@ tbody {
 }
 
 .trDataCheck{
-  background-color: rgb(166, 194, 255);
+  background-color: rgb(139, 108, 225);
   display: flex;
   justify-content: flex-start;
   margin: 5px 4px;
   padding: 0 4px;
   border-radius: 8px;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
 ::-webkit-scrollbar {
