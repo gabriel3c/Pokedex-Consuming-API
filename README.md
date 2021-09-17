@@ -1,6 +1,6 @@
 # Pokedex
 
- <p>A list that fetches PokeAPI Pokemon data</p>
+ <p>Um projeto que busca dados sobre Pokémons do PokeAPI</p>
  
 <h2> Projeto criado para praticar requisições de API's, manipulação e exibição de seus dados</h2>
 
